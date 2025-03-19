@@ -10,6 +10,17 @@ document.addEventListener("DOMContentLoaded", function () {
   function createOverlay() {
     menuOverlay = document.createElement("div");
     menuOverlay.className = "menu-overlay";
+    menuOverlay.style.position = "fixed";
+    menuOverlay.style.top = "0";
+    menuOverlay.style.left = "0";
+    menuOverlay.style.width = "100%";
+    menuOverlay.style.height = "100%";
+    menuOverlay.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+    menuOverlay.style.zIndex = "90";
+    menuOverlay.style.opacity = "0";
+    menuOverlay.style.visibility = "hidden";
+    menuOverlay.style.transition = "all 0.3s ease-in-out";
+
     // Inserir o overlay antes do nav no DOM para controlar melhor o z-index
     document.body.insertBefore(menuOverlay, document.body.firstChild);
 
@@ -21,7 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function openMenu() {
     mainNav.classList.add("active");
     menuBtn.classList.add("active");
-    menuOverlay.classList.add("active");
+    menuOverlay.style.opacity = "1";
+    menuOverlay.style.visibility = "visible";
     document.body.style.overflow = "hidden"; // Impedir rolagem da página quando menu aberto
   }
 
@@ -29,7 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function closeMenu() {
     mainNav.classList.remove("active");
     menuBtn.classList.remove("active");
-    menuOverlay.classList.remove("active");
+    menuOverlay.style.opacity = "0";
+    menuOverlay.style.visibility = "hidden";
     document.body.style.overflow = ""; // Restaurar rolagem da página
   }
 
@@ -39,6 +52,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!document.querySelector("#main-nav .mobile-contact-btn")) {
         const mobileContactBtn = contactBtn.cloneNode(true);
         mobileContactBtn.classList.add("mobile-contact-btn");
+        // Garantir que o botão de contato mobile também redirecione para contato.html
+        mobileContactBtn.onclick = function () {
+          window.location.href = "contato.html";
+        };
         mainNav.appendChild(mobileContactBtn);
       }
       contactBtn.style.display = "none";

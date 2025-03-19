@@ -1,0 +1,358 @@
+/* Estilos para a página de Contato */
+
+.contato-banner {
+  height: 500px;
+  background: url("../../../assets/images/contato.png") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+
+  /* Overlay azul */
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(22, 45, 84, 0.75);
+    z-index: 5;
+  }
+
+  /* Efeito de animação de zoom */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    animation: slowZoom 30s linear forwards;
+  }
+
+  &__container {
+    max-width: 800px;
+    padding: 0 1.5rem;
+    z-index: 10;
+    position: relative;
+  }
+
+  &__titulo {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: var(--accent-color);
+    }
+  }
+
+  &__subtitulo {
+    font-size: 1.4rem;
+    opacity: 0.9;
+    margin-top: 2rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.contato {
+  padding: 5rem 0;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: flex-start;
+  }
+
+  &__info {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem;
+    height: 100%;
+  }
+
+  &__titulo {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: var(--accent-color);
+    }
+  }
+
+  &__texto {
+    color: var(--text-color);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  &__dados {
+    margin-bottom: 2.5rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+
+    i {
+      color: var(--accent-color);
+      font-size: 1.2rem;
+      margin-right: 1rem;
+      margin-top: 0.25rem;
+    }
+
+    .contato__item-conteudo {
+      flex: 1;
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+      color: var(--primary-color);
+    }
+
+    p,
+    a {
+      color: var(--text-color);
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: var(--accent-color);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(67, 214, 198, 0.3);
+      }
+    }
+  }
+
+  &__formulario {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem;
+  }
+
+  &__form {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  &__campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    label {
+      font-weight: 500;
+      color: var(--primary-color);
+    }
+
+    input,
+    textarea {
+      padding: 0.75rem 1rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: var(--accent-color);
+        box-shadow: 0 0 0 2px rgba(67, 214, 198, 0.2);
+      }
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+  }
+
+  &__botao {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    justify-self: start;
+
+    &:hover {
+      background-color: var(--primary-color-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__mapa {
+    margin-top: 5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+    &-container {
+      width: 100%;
+      height: 450px;
+    }
+
+    &-titulo {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .contato {
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contato-banner {
+    height: 400px;
+
+    &__titulo {
+      font-size: 2.5rem;
+    }
+
+    &__subtitulo {
+      font-size: 1.2rem;
+    }
+
+    /* Corrigir o overlay para garantir que ele apareça no mobile */
+    &::before {
+      height: 100%;
+      background-color: rgba(22, 45, 84, 0.75);
+      width: 100%;
+      z-index: 5;
+    }
+  }
+
+  .contato {
+    padding: 3rem 0;
+
+    &__titulo {
+      font-size: 1.9rem;
+    }
+
+    &__texto {
+      font-size: 1rem;
+    }
+
+    &__info,
+    &__formulario {
+      padding: 2rem;
+    }
+
+    &__mapa {
+      margin-top: 3rem;
+
+      &-container {
+        height: 350px;
+      }
+
+      &-titulo {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .contato {
+    &__info,
+    &__formulario {
+      padding: 1.5rem;
+    }
+
+    &__mapa-container {
+      height: 300px;
+    }
+  }
+}
