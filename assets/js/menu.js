@@ -4,32 +4,69 @@ document.addEventListener("DOMContentLoaded", function () {
   const mainNav = document.getElementById("main-nav");
   const menuLinks = document.querySelectorAll("#main-nav a");
   const contactBtn = document.querySelector(".contact-btn");
+  let menuOverlay;
 
-  if (menuBtn && mainNav) {
-    // Adiciona o botão de contato dentro do menu no mobile
-    function adjustMenuForMobile() {
-      if (window.innerWidth <= 768) {
-        if (!document.querySelector("#main-nav .mobile-contact-btn")) {
-          const mobileContactBtn = contactBtn.cloneNode(true);
-          mobileContactBtn.classList.add("mobile-contact-btn");
-          mainNav.appendChild(mobileContactBtn);
-        }
-        contactBtn.style.display = "none";
-      } else {
-        const mobileContactBtn = document.querySelector(
-          "#main-nav .mobile-contact-btn"
-        );
-        if (mobileContactBtn) {
-          mobileContactBtn.remove();
-        }
-        contactBtn.style.display = "block";
+  // Criar overlay para o menu
+  function createOverlay() {
+    menuOverlay = document.createElement("div");
+    menuOverlay.className = "menu-overlay";
+    // Inserir o overlay antes do nav no DOM para controlar melhor o z-index
+    document.body.insertBefore(menuOverlay, document.body.firstChild);
+
+    // Adicionar evento para fechar o menu ao clicar no overlay
+    menuOverlay.addEventListener("click", closeMenu);
+  }
+
+  // Função para abrir o menu
+  function openMenu() {
+    mainNav.classList.add("active");
+    menuBtn.classList.add("active");
+    menuOverlay.classList.add("active");
+    document.body.style.overflow = "hidden"; // Impedir rolagem da página quando menu aberto
+  }
+
+  // Função para fechar o menu
+  function closeMenu() {
+    mainNav.classList.remove("active");
+    menuBtn.classList.remove("active");
+    menuOverlay.classList.remove("active");
+    document.body.style.overflow = ""; // Restaurar rolagem da página
+  }
+
+  // Adiciona o botão de contato dentro do menu no mobile
+  function adjustMenuForMobile() {
+    if (window.innerWidth <= 768) {
+      if (!document.querySelector("#main-nav .mobile-contact-btn")) {
+        const mobileContactBtn = contactBtn.cloneNode(true);
+        mobileContactBtn.classList.add("mobile-contact-btn");
+        mainNav.appendChild(mobileContactBtn);
       }
-    }
+      contactBtn.style.display = "none";
+    } else {
+      const mobileContactBtn = document.querySelector(
+        "#main-nav .mobile-contact-btn"
+      );
+      if (mobileContactBtn) {
+        mobileContactBtn.remove();
+      }
+      contactBtn.style.display = "block";
 
-    // Toggle do menu móvel
+      // Garantir que o menu esteja fechado ao redimensionar para desktop
+      closeMenu();
+    }
+  }
+
+  // Toggle do menu móvel
+  if (menuBtn && mainNav) {
+    // Criar overlay
+    createOverlay();
+
     menuBtn.addEventListener("click", function () {
-      mainNav.classList.toggle("active");
-      menuBtn.classList.toggle("active");
+      if (mainNav.classList.contains("active")) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
     });
 
     // Scroll suave para as seções quando clicar nos links do menu
@@ -38,8 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const href = this.getAttribute("href");
 
         // Fechar o menu móvel antes de qualquer ação
-        mainNav.classList.remove("active");
-        menuBtn.classList.remove("active");
+        closeMenu();
 
         // Se for um link de âncora (começa com #), previne o comportamento padrão e faz scroll suave
         if (href && href.startsWith("#")) {
@@ -69,8 +105,14 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         }
         // Para links normais (como sobre.html), deixa o comportamento padrão acontecer
-        // não faz nada, apenas deixa o navegador redirecionar
       });
+    });
+
+    // Adicionar evento para tecla Escape para fechar o menu
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && mainNav.classList.contains("active")) {
+        closeMenu();
+      }
     });
 
     // Ajustar o menu ao redimensionar

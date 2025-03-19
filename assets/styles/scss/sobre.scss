@@ -266,9 +266,17 @@
       font-size: 1.2rem;
     }
 
-    /* Garantir que a borda continue visível e contida no mobile */
+    /* Corrigir o overlay para garantir que ele apareça no mobile */
     &::before {
-      height: 4px; /* Ligeiramente menor em dispositivos móveis */
+      height: 100%; /* Usar 100% ao invés de 4px para cobrir todo o banner */
+      background-color: rgba(
+        22,
+        45,
+        84,
+        0.75
+      ); /* Garantir que a cor do overlay seja aplicada */
+      width: 100%;
+      z-index: 5; /* Manter o mesmo z-index do desktop */
     }
   }
 
