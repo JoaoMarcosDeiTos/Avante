@@ -1,0 +1,161 @@
+/* Arquivo principal de estilos */
+
+// Importações
+@import "reset";
+@import "topo";
+@import "banner";
+@import "servicos";
+@import "clientes";
+@import "footer";
+@import "sobre";
+
+// Variáveis globais
+:root {
+  --primary-color: rgb(22, 45, 84); /* Azul escuro */
+  --primary-color-rgb: 22, 45, 84;
+  --primary-color-dark: rgb(16, 33, 61); /* Versão escura do azul principal */
+  --secondary-color: rgb(246, 168, 0); /* Amarelo alaranjado */
+  --secondary-color-rgb: 246, 168, 0;
+  --accent-color: rgb(67, 214, 198); /* Azul claro (verde-água) */
+  --accent-color-rgb: 67, 214, 198;
+  --text-color: #333333;
+  --primary-light: rgba(22, 45, 84, 0.8);
+  --secondary-light: rgba(246, 168, 0, 0.1);
+  --accent-light: rgba(67, 214, 198, 0.2);
+}
+
+// Estilos globais
+body {
+  background-color: #f5f5f5; /* Cinza claro */
+  color: var(--text-color);
+}
+
+/* Estilos do header e navegação */
+header {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  img {
+    height: 50px;
+  }
+}
+
+#main-nav {
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-left: 2rem;
+
+      a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+
+  .mobile-contact-btn {
+    display: none;
+  }
+}
+
+.contact-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--primary-color-dark);
+  }
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+    order: 3;
+  }
+
+  #main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 5rem 2rem 2rem;
+
+    &.active {
+      right: 0;
+    }
+
+    ul {
+      flex-direction: column;
+
+      li {
+        margin: 0 0 1.5rem 0;
+
+        a {
+          font-size: 1.2rem;
+          display: block;
+          padding: 0.5rem 0;
+        }
+      }
+    }
+
+    .mobile-contact-btn {
+      display: block;
+      margin-top: 2rem;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .mobile-menu-btn.active {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 1001;
+    color: var(--primary-color);
+  }
+}

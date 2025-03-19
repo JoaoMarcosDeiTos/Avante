@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avante</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/images/favicon/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/images/favicon/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
+    <!-- Fim Favicon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/styles/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img src="assets/images/logo.png" alt="Logo Avante" />
+        </div>
+
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="main-nav">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#clientes">Clientes</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </nav>
+
+        <button class="contact-btn">Contato</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="banner">
+        <div class="banner__slide slide-1 active">
+          <div class="banner__text">
+            <h2>Podemos ajudar a expandir seu negócio</h2>
+            <p>Conte com nossa expertise para crescer de forma sustentável</p>
+          </div>
+        </div>
+
+        <div class="banner__slide slide-2">
+          <div class="banner__text">
+            <h2>Confiança, agilidade e eficiência em licitações</h2>
+            <p>
+              Sua empresa merece o melhor suporte para participar de processos
+              licitatórios
+            </p>
+          </div>
+        </div>
+
+        <div class="banner__slide slide-3">
+          <div class="banner__text">
+            <h2>Nossa equipe trabalha por sua empresa</h2>
+            <p>
+              Profissionais dedicados a garantir resultados excepcionais para
+              seu negócio
+            </p>
+          </div>
+        </div>
+
+        <div class="banner__slide slide-4">
+          <div class="banner__text">
+            <h2>O mercado público pode ser a solução em meio às crises</h2>
+            <p>
+              Descubra novas oportunidades para sua empresa no setor público
+            </p>
+          </div>
+        </div>
+
+        <div class="banner__nav">
+          <div class="banner__nav-dot active" data-slide="0"></div>
+          <div class="banner__nav-dot" data-slide="1"></div>
+          <div class="banner__nav-dot" data-slide="2"></div>
+          <div class="banner__nav-dot" data-slide="3"></div>
+        </div>
+
+        <div class="banner__arrows">
+          <button class="banner__arrow--prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="banner__arrow--next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="servicos" id="servicos">
+        <h2 class="servicos__titulo">Nossos Serviços</h2>
+        <div class="servicos__grid">
+          <div class="servicos__item" data-servico="1">
+            <img
+              src="assets/images/Editais-de-concursos-públicos-3-dicas-Capa.jpg.webp"
+              alt="Captação de Editais"
+              class="servicos__imagem"
+            />
+            <div class="servicos__overlay"></div>
+            <div class="servicos__conteudo">
+              <i class="servicos__icone fas fa-search"></i>
+              <h3 class="servicos__titulo-item">Captação de Editais</h3>
+              <p class="servicos__descricao">
+                Captamos editais diariamente, basta definir o seu segmento e
+                área de atuação, e o resto, é por nossa conta!
+              </p>
+            </div>
+          </div>
+
+          <div class="servicos__item" data-servico="2">
+            <img
+              src="assets/images/edital-de-licitacao.jpg"
+              alt="Análise Técnica dos Editais"
+              class="servicos__imagem"
+            />
+            <div class="servicos__overlay"></div>
+            <div class="servicos__conteudo">
+              <i class="servicos__icone fas fa-clipboard-check"></i>
+              <h3 class="servicos__titulo-item">Análise Técnica dos Editais</h3>
+              <p class="servicos__descricao">
+                Disponibilizamos uma equipe técnica para análise completa dos
+                editais, apontando irregularidades e vícios que podem gerar
+                prejuízos.
+              </p>
+            </div>
+          </div>
+
+          <div class="servicos__item" data-servico="3">
+            <img
+              src="assets/images/gestão documental.jpg"
+              alt="Gestão Documental"
+              class="servicos__imagem"
+            />
+            <div class="servicos__overlay"></div>
+            <div class="servicos__conteudo">
+              <i class="servicos__icone fas fa-file-alt"></i>
+              <h3 class="servicos__titulo-item">Gestão Documental</h3>
+              <p class="servicos__descricao">
+                Realizamos a gestão documental, controlando certidões, emitindo
+                documentos eletrônicos e orientação.
+              </p>
+            </div>
+          </div>
+
+          <div class="servicos__item" data-servico="4">
+            <img
+              src="assets/images/montagem de docs.png"
+              alt="Montagem de Documentação"
+              class="servicos__imagem"
+            />
+            <div class="servicos__overlay"></div>
+            <div class="servicos__conteudo">
+              <i class="servicos__icone fas fa-folder-open"></i>
+              <h3 class="servicos__titulo-item">Montagem de Documentação</h3>
+              <p class="servicos__descricao">
+                Efetuamos de forma minuciosa a montagem dos envelopes de acordo
+                com cada edital bem como a elaboração das propostas de preços.
+              </p>
+            </div>
+          </div>
+
+          <div class="servicos__item" data-servico="5">
+            <img
+              src="assets/images/Trabalho-presencial-time-reunido.jpg"
+              alt="Representação Presencial"
+              class="servicos__imagem"
+            />
+            <div class="servicos__overlay"></div>
+            <div class="servicos__conteudo">
+              <i class="servicos__icone fas fa-user-tie"></i>
+              <h3 class="servicos__titulo-item">Representação Presencial</h3>
+              <p class="servicos__descricao">
+                Representamos sua empresa nos Certames Presenciais, através de
+                uma equipe qualificada, sempre atenta na documentação
+                apresentada pelos concorrentes.
+              </p>
+            </div>
+          </div>
+
+          <div class="servicos__item" data-servico="6">
+            <img
+              src="assets/images/fgts-carteira-de-trabalho-digital-e-mais-entenda-a-importancia-de-deixar-o-seu-cadastro-atualizado-nos-portais-do-governo.webp"
+              alt="Cadastramento em Portais e Órgãos"
+              class="servicos__imagem"
+            />
+            <div class="servicos__overlay"></div>
+            <div class="servicos__conteudo">
+              <i class="servicos__icone fas fa-building"></i>
+              <h3 class="servicos__titulo-item">
+                Cadastramento em Portais e Órgãos
+              </h3>
+              <p class="servicos__descricao">
+                Efetuamos o cadastro da sua empresa junto aos Órgãos Públicos, e
+                Portais de vendas Públicas, cadastrando toda documentação.
+              </p>
+            </div>
+          </div>
+
+          <div class="servicos__item" data-servico="7">
+            <img
+              src="assets/images/aprenda-tudo-sobre-pregao-eletronico-e-saiba-como-ganhar.jpg"
+              alt="Pregões Eletrônicos"
+              class="servicos__imagem"
+            />
+            <div class="servicos__overlay"></div>
+            <div class="servicos__conteudo">
+              <i class="servicos__icone fas fa-desktop"></i>
+              <h3 class="servicos__titulo-item">Pregões Eletrônicos</h3>
+              <p class="servicos__descricao">
+                Concorremos Pregões Eletrônicos em todas as etapas, desde o
+                cadastramento da empresa nos portais até a efetiva participação.
+              </p>
+            </div>
+          </div>
+
+          <div class="servicos__item" data-servico="8">
+            <img
+              src="assets/images/juridico.jpg"
+              alt="Jurídico Especializado"
+              class="servicos__imagem"
+            />
+            <div class="servicos__overlay"></div>
+            <div class="servicos__conteudo">
+              <i class="servicos__icone fas fa-balance-scale"></i>
+              <h3 class="servicos__titulo-item">Jurídico Especializado</h3>
+              <p class="servicos__descricao">
+                Possuímos uma equipe de Advogados Especialistas em Licitações e
+                Contratos, responsáveis pelo contencioso administrativo e
+                jurídico.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="clientes" id="clientes">
+        <h2 class="clientes__titulo">Nossos Clientes</h2>
+        <p class="clientes__subtitulo">
+          Empresas que confiam em nosso trabalho
+        </p>
+
+        <div class="clientes__carrossel-container">
+          <div class="clientes__carrossel">
+            <!-- As logos serão duplicadas via JavaScript para criar o efeito infinito -->
+            <div class="clientes__item">
+              <img
+                src="assets/images/clientes/logo1.png"
+                alt="Cliente 1"
+                class="clientes__logo"
+              />
+            </div>
+            <div class="clientes__item">
+              <img
+                src="assets/images/clientes/logo2.png"
+                alt="Cliente 2"
+                class="clientes__logo"
+              />
+            </div>
+            <div class="clientes__item">
+              <img
+                src="assets/images/clientes/logo3.png"
+                alt="Cliente 3"
+                class="clientes__logo"
+              />
+            </div>
+            <div class="clientes__item">
+              <img
+                src="assets/images/clientes/logo4.png"
+                alt="Cliente 4"
+                class="clientes__logo"
+              />
+            </div>
+            <div class="clientes__item">
+              <img
+                src="assets/images/clientes/logo5.png"
+                alt="Cliente 5"
+                class="clientes__logo"
+              />
+            </div>
+            <div class="clientes__item">
+              <img
+                src="assets/images/clientes/logo6.png"
+                alt="Cliente 6"
+                class="clientes__logo"
+              />
+            </div>
+            <div class="clientes__item">
+              <img
+                src="assets/images/clientes/logo7.png"
+                alt="Cliente 7"
+                class="clientes__logo"
+              />
+            </div>
+            <div class="clientes__item">
+              <img
+                src="assets/images/clientes/logo8.png"
+                alt="Cliente 8"
+                class="clientes__logo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal de Serviços -->
+      <div class="servicos-modal" id="servicosModal">
+        <div class="servicos-modal__container">
+          <button class="servicos-modal__close" id="modalClose">
+            <i class="fas fa-times"></i>
+          </button>
+
+          <div class="servicos-modal__header">
+            <img
+              src=""
+              alt=""
+              class="servicos-modal__imagem-banner"
+              id="modalImagem"
+            />
+            <div class="servicos-modal__overlay-banner">
+              <h2 class="servicos-modal__titulo" id="modalTitulo"></h2>
+              <p class="servicos-modal__subtitulo" id="modalSubtitulo"></p>
+            </div>
+          </div>
+
+          <div class="servicos-modal__conteudo" id="modalConteudo">
+            <!-- Conteúdo será preenchido via JavaScript -->
+          </div>
+
+          <div class="servicos-modal__navegacao">
+            <button
+              class="servicos-modal__nav-btn servicos-modal__nav-btn--prev"
+              id="modalPrev"
+            >
+              <i class="fas fa-chevron-left"></i> Anterior
+            </button>
+            <button
+              class="servicos-modal__nav-btn servicos-modal__nav-btn--next"
+              id="modalNext"
+            >
+              Próximo <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__coluna">
+          <a href="#" class="footer__logo">
+            <img src="assets/images/logo.png" alt="Logo Avante" />
+          </a>
+          <p class="footer__descricao">
+            Somos especialistas em licitações públicas, oferecendo soluções
+            completas para empresas que desejam expandir seus negócios no
+            mercado público.
+          </p>
+          <div class="footer__redes">
+            <a
+              href="https://www.facebook.com/AvanteLicitacoesBR"
+              target="_blank"
+              class="footer__rede-social"
+              aria-label="Facebook"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/avantelicitacoes"
+              target="_blank"
+              class="footer__rede-social"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="footer__rede-social" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="footer__rede-social" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__coluna">
+          <h3 class="footer__titulo">Entre em Contato</h3>
+
+          <div class="footer__info">
+            <div class="footer__contato-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="contato-conteudo">
+                <p class="footer__endereco">
+                  Av. Aminthas de Barros, nº 399, Sala 08,<br />
+                  Jardim Ipanema, Londrina-PR.
+                </p>
+              </div>
+            </div>
+
+            <div class="footer__contato-item">
+              <i class="fas fa-phone-alt"></i>
+              <div class="contato-conteudo">
+                <p class="footer__telefone">Telefone e Whatsapp:</p>
+                <a href="tel:+554333444119" class="footer__link"
+                  >(43) 3344-4119</a
+                >
+              </div>
+            </div>
+
+            <div class="footer__contato-item">
+              <i class="far fa-envelope"></i>
+              <div class="contato-conteudo">
+                <p class="footer__email">Email para contato:</p>
+                <a
+                  href="mailto:contato@avantelicitacoes.com.br"
+                  class="footer__link"
+                >
+                  contato@avantelicitacoes.com.br
+                </a>
+              </div>
+            </div>
+
+            <div class="footer__contato-item">
+              <i class="fab fa-whatsapp"></i>
+              <div class="contato-conteudo">
+                <p>
+                  Inicie uma conversa pelo
+                  <span class="footer__destaque">WhatsApp</span>:
+                </p>
+                <a
+                  href="https://wa.me/message/6LR57O2B6CHMI1"
+                  class="footer__link footer__link--whatsapp"
+                >
+                  <i class="fab fa-whatsapp"></i> Conversar no WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__copyright">
+        <p>&copy; 2023 Avante Licitações - Todos os direitos reservados</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/banner.js"></script>
+    <script src="assets/js/servicos.js"></script>
+    <script src="assets/js/clientes.js"></script>
+  </body>
+</html>
