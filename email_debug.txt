@@ -1,0 +1,50 @@
+[2025-03-19 15:46:51] Iniciando processamento da requisição
+[2025-03-19 15:46:51] Dados recebidos: {"nome":"joao teste","email":"joao@teste.com.br","telefone":"4391234567890","mensagem":"teste de mensagem apos apagar os arquivos "}
+[2025-03-19 15:46:51] Preparando requisição para EmailJS: {"service_id":"service_pcftlul","template_id":"template_kum5gtf","user_id":"Lxn0pT0HD0L7DlCct","template_params":{"name":"joao teste","message":"teste de mensagem apos apagar os arquivos ","from_name":"joao teste","from_email":"joao@teste.com.br","title":"Nova mensagem do site","phone":"4391234567890"}}
+[2025-03-19 15:46:53] Debug cURL: *   Trying 54.212.43.215:443...
+* Connected to api.emailjs.com (54.212.43.215) port 443
+* ALPN: curl offers h2,http/1.1
+*  CAfile: C:\xampp\apache\bin\curl-ca-bundle.crt
+*  CApath: none
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=*.emailjs.com
+*  start date: Dec  8 00:00:00 2024 GMT
+*  expire date: Jan  6 23:59:59 2026 GMT
+*  subjectAltName: host "api.emailjs.com" matched cert's "*.emailjs.com"
+*  issuer: C=US; O=Amazon; CN=Amazon RSA 2048 M03
+*  SSL certificate verify ok.
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://api.emailjs.com/api/v1.0/email/send
+* [HTTP/2] [1] [:method: POST]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: api.emailjs.com]
+* [HTTP/2] [1] [:path: /api/v1.0/email/send]
+* [HTTP/2] [1] [accept: */*]
+* [HTTP/2] [1] [content-type: application/json]
+* [HTTP/2] [1] [origin: http://localhost]
+* [HTTP/2] [1] [content-length: 304]
+> POST /api/v1.0/email/send HTTP/2
+Host: api.emailjs.com
+Accept: */*
+Content-Type: application/json
+Origin: http://localhost
+Content-Length: 304
+
+< HTTP/2 200 
+< date: Wed, 19 Mar 2025 14:46:51 GMT
+< content-type: text/plain; charset=utf-8
+< content-length: 2
+< server: nginx
+< x-content-type-options: nosniff
+< x-frame-options: DENY
+< content-security-policy: default-src none; frame-ancestors none
+< access-control-allow-origin: *
+< etag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"
+< 
+* Connection #0 to host api.emailjs.com left intact
+
+[2025-03-19 15:46:53] Resposta HTTP: 200
+[2025-03-19 15:46:53] Resposta: OK
+[2025-03-19 15:46:53] Email enviado com sucesso

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mensagem Enviada - Avante Licitações</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/images/favicon/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/images/favicon/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
+    <!-- Fim Favicon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/styles/css/style.css" />
+    <style>
+      .sucesso {
+        padding: 80px 20px;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .sucesso__icon {
+        font-size: 5rem;
+        color: #27ae60;
+        margin-bottom: 20px;
+      }
+
+      .sucesso__titulo {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #162d54;
+      }
+
+      .sucesso__texto {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        line-height: 1.6;
+      }
+
+      .sucesso__botao {
+        display: inline-block;
+        background-color: #162d54;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      .sucesso__botao:hover {
+        background-color: #0d1b33;
+      }
+
+      .sucesso__contador {
+        margin-top: 20px;
+        font-size: 0.9rem;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img src="assets/images/logo.png" alt="Logo Avante" />
+        </div>
+
+        <button class="mobile-menu-btn" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="main-nav">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="index.html#servicos">Serviços</a></li>
+            <li><a href="index.html#clientes">Clientes</a></li>
+          </ul>
+        </nav>
+
+        <button
+          class="contact-btn"
+          onclick="window.location.href='contato.html'"
+        >
+          Contato
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="sucesso">
+        <div class="sucesso__icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h1 class="sucesso__titulo">Mensagem Enviada com Sucesso!</h1>
+        <p class="sucesso__texto">
+          Obrigado por entrar em contato conosco. Nossa equipe recebeu sua
+          mensagem e responderemos o mais breve possível, geralmente em até 24
+          horas úteis.
+        </p>
+        <a href="index.html" class="sucesso__botao">Voltar ao Início</a>
+        <div class="sucesso__contador">
+          Você será redirecionado automaticamente em
+          <span id="contador">10</span> segundos.
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__coluna">
+          <a href="#" class="footer__logo">
+            <img src="assets/images/logo.png" alt="Logo Avante" />
+          </a>
+          <p class="footer__descricao">
+            Somos especialistas em licitações públicas, oferecendo soluções
+            completas para empresas que desejam expandir seus negócios no
+            mercado público.
+          </p>
+          <div class="footer__redes">
+            <a
+              href="https://www.facebook.com/AvanteLicitacoesBR"
+              target="_blank"
+              class="footer__rede-social"
+              aria-label="Facebook"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/avantelicitacoes"
+              target="_blank"
+              class="footer__rede-social"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="footer__rede-social" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="footer__rede-social" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__coluna">
+          <h3 class="footer__titulo">Entre em Contato</h3>
+
+          <div class="footer__info">
+            <div class="footer__contato-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="contato-conteudo">
+                <p class="footer__endereco">
+                  Av. Aminthas de Barros, nº 399, Sala 08,<br />
+                  Jardim Ipanema, Londrina-PR.
+                </p>
+              </div>
+            </div>
+
+            <div class="footer__contato-item">
+              <i class="fas fa-phone-alt"></i>
+              <div class="contato-conteudo">
+                <p class="footer__telefone">Telefone e Whatsapp:</p>
+                <a href="tel:+554333444119" class="footer__link"
+                  >(43) 3344-4119</a
+                >
+              </div>
+            </div>
+
+            <div class="footer__contato-item">
+              <i class="far fa-envelope"></i>
+              <div class="contato-conteudo">
+                <p class="footer__email">Email para contato:</p>
+                <a
+                  href="mailto:contato@avantelicitacoes.com.br"
+                  class="footer__link"
+                >
+                  contato@avantelicitacoes.com.br
+                </a>
+              </div>
+            </div>
+
+            <div class="footer__contato-item">
+              <i class="fab fa-whatsapp"></i>
+              <div class="contato-conteudo">
+                <p>
+                  Inicie uma conversa pelo
+                  <span class="footer__destaque">WhatsApp</span>:
+                </p>
+                <a
+                  href="https://wa.me/message/6LR57O2B6CHMI1"
+                  class="footer__link footer__link--whatsapp"
+                >
+                  <i class="fab fa-whatsapp"></i> Conversar no WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__copyright">
+        <p>&copy; 2023 Avante Licitações - Todos os direitos reservados</p>
+      </div>
+    </footer>
+
+    <script>
+      // Contador regressivo e redirecionamento
+      let tempo = 10;
+      const contadorEl = document.getElementById("contador");
+
+      const intervalo = setInterval(() => {
+        tempo--;
+        contadorEl.textContent = tempo;
+
+        if (tempo <= 0) {
+          clearInterval(intervalo);
+          window.location.href = "index.html";
+        }
+      }, 1000);
+
+      // Script de menu
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuBtn = document.querySelector(".mobile-menu-btn");
+        const mainNav = document.getElementById("main-nav");
+        const contactBtn = document.querySelector(".contact-btn");
+        let menuOverlay;
+
+        // Criar overlay para o menu
+        function createOverlay() {
+          menuOverlay = document.createElement("div");
+          menuOverlay.className = "menu-overlay";
+          document.body.insertBefore(menuOverlay, document.body.firstChild);
+          menuOverlay.addEventListener("click", closeMenu);
+        }
+
+        // Função para abrir o menu
+        function openMenu() {
+          mainNav.classList.add("active");
+          menuBtn.classList.add("active");
+          menuOverlay.style.opacity = "1";
+          menuOverlay.style.visibility = "visible";
+          document.body.style.overflow = "hidden";
+        }
+
+        // Função para fechar o menu
+        function closeMenu() {
+          mainNav.classList.remove("active");
+          menuBtn.classList.remove("active");
+          menuOverlay.style.opacity = "0";
+          menuOverlay.style.visibility = "hidden";
+          document.body.style.overflow = "";
+        }
+
+        // Adiciona o botão de contato dentro do menu no mobile
+        function adjustMenuForMobile() {
+          if (window.innerWidth <= 768) {
+            if (
+              !document.querySelector("#main-nav .mobile-contact-btn") &&
+              contactBtn
+            ) {
+              const mobileContactBtn = contactBtn.cloneNode(true);
+              mobileContactBtn.classList.add("mobile-contact-btn");
+              mobileContactBtn.onclick = function () {
+                window.location.href = "contato.html";
+              };
+              mainNav.appendChild(mobileContactBtn);
+            }
+            if (contactBtn) contactBtn.style.display = "none";
+          } else {
+            const mobileContactBtn = document.querySelector(
+              "#main-nav .mobile-contact-btn"
+            );
+            if (mobileContactBtn) {
+              mobileContactBtn.remove();
+            }
+            if (contactBtn) contactBtn.style.display = "block";
+            closeMenu();
+          }
+        }
+
+        if (menuBtn && mainNav) {
+          // Criar overlay
+          createOverlay();
+
+          // Toggle do menu
+          menuBtn.addEventListener("click", function () {
+            if (mainNav.classList.contains("active")) {
+              closeMenu();
+            } else {
+              openMenu();
+            }
+          });
+
+          // Links do menu
+          const menuLinks = document.querySelectorAll("#main-nav a");
+          menuLinks.forEach((link) => {
+            link.addEventListener("click", function () {
+              closeMenu();
+            });
+          });
+
+          // Tecla ESC
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && mainNav.classList.contains("active")) {
+              closeMenu();
+            }
+          });
+
+          // Ajustar menu ao redimensionar
+          window.addEventListener("resize", adjustMenuForMobile);
+
+          // Inicializar
+          adjustMenuForMobile();
+        }
+      });
+    </script>
+  </body>
+</html>
